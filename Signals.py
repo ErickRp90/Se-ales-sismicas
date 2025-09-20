@@ -31,10 +31,10 @@ from norma_time import normalize
 tr1.data = normalize(tr1.data, method="onebit")
 tr2.data = normalize(tr2.data, method="onebit")
 
-""" time = tr1.times("relative") 
+time = tr1.times("relative") 
 plt.figure(figsize=(12, 4))
 plt.plot(time, tr1.data)
-plt.show() """
+plt.show() 
 
 
 # Cross-correlation of two traces
@@ -54,7 +54,6 @@ print(f"Max correlation at shift: {shift} samples")
 print(f"Time lag: {dt:.4f} seconds")
 
 
-#Graph
 # Create time axis for cross-correlation
 npts = len(cc)
 time_axis = np.linspace(-npts/2, npts/2, npts) / tr1.stats.sampling_rate
